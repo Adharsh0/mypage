@@ -1,0 +1,100 @@
+.projects-container {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .projects-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-item {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;  /* Centers the content within the project item */
+  }
+  
+  .project-item.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .project-item:not(.visible) {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.06);
+  }
+  
+  .project-item h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .project-item p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .github-link {
+    color: #007bff;
+    text-decoration: underline;
+    margin-right: 1rem;
+  }
+  
+  .github-link:hover {
+    color: #0056b3;
+  }
+  
+  .know-more-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .know-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Image styling */
+  .project-item img.project-image {
+    width: 100%;
+    height: 200px; /* Adjust the height as per your design */
+    object-fit: cover; /* Ensures the image fits within the container without distortion */
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .projects-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

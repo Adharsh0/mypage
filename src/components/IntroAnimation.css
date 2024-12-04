@@ -1,0 +1,126 @@
+/* Container */
+.hero-container {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    padding: 50px;
+    background: url('pic.jpeg') center/cover no-repeat;
+    background-size: cover; /* Ensure it covers the container */
+    filter: grayscale(50%); /* Apply black-and-white theme to background */
+    color: black;
+    min-height: 90vh;
+    width: 100%;
+    position: relative; /* Allow for absolute positioning of content */
+    background-position: center center; /* Ensure the image is centered */
+  }
+  
+  /* Overlay for text */
+  .hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better text visibility */
+    z-index: 1; /* Place overlay behind the content */
+  }
+  
+  /* Content */
+  .hero-content {
+    max-width: 50%;
+    z-index: 3; /* Ensure text appears above the overlay */
+    position: relative; /* Ensure the content is not affected by the overlay */
+    text-align: right; /* Align the text to the right */
+  }
+  
+  /* Glowing Name */
+  .glowing-name {
+    font-size: 3.5rem; /* Increased size for more emphasis */
+    font-weight: 700; /* Bolder text for better readability */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700; /* Glowing effect */
+    animation: glowing 1.5s infinite alternate; /* Glowing animation */
+  }
+  
+  /* Typewriter Effect */
+  .typewriter {
+    display: inline-block;
+    color: #ffd700;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+  }
+  
+  /* Buttons */
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+  
+  .hero-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  /* Style for yellow button */
+  .yellow-btn {
+    background-color: #ffd700; /* Yellow button */
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  .yellow-btn:hover {
+    background-color: #f5c600;
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+  }
+  
+  /* Updated style for the outline button */
+  .outline-btn {
+    background: none;
+    border: 2px solid gold;
+    color: black;
+    padding: 14px 25px;
+    font-size: 1.2rem;
+    border-radius: 35px; /* Larger border-radius for a rounded look */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .outline-btn a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .outline-btn:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+  }
+  
+  /* Add box-shadow to the buttons when hovered */
+  .hero-btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  }
+  
+  /* Glowing Animation */
+  @keyframes glowing {
+    0% {
+      text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+    }
+    50% {
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+    }
+    100% {
+      text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+    }
+  }
+  
