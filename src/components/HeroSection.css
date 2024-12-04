@@ -4,7 +4,7 @@
     justify-content: flex-end; /* Align content to the right */
     align-items: center;
     padding: 50px;
-    background: url('pic.jpeg') center/cover no-repeat;
+    background: url('/pic.jpeg') center/cover no-repeat;
     background-size: cover; /* Ensure it covers the container */
     filter: grayscale(50%); /* Apply black-and-white theme to background */
     color: black;

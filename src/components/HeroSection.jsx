@@ -42,7 +42,7 @@ const HeroSection = ({ onProfileClick }) => {
           <button className="hero-btn yellow-btn">Connect with Me</button>
           <button className="hero-btn yellow-btn" onClick={onProfileClick}>My Profile</button>
           <button className="hero-btn outline-btn">
-            <a href="#skills">View My Skills below</a>
+            <a href="#skills">View My Skills</a>
           </button>
         </div>
       </div>
