@@ -19,7 +19,7 @@
   }
   
   .project-item {
-    background-color: #fff;
+    background-color:darkslategrey;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     padding: 1.5rem;
@@ -46,16 +46,16 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #333;
+    color:black;
   }
   
   .project-item p {
-    color: #666;
+    color:#fff;
     margin-bottom: 1rem;
   }
   
   .github-link {
-    color: #007bff;
+    color:#007bff;
     text-decoration: underline;
     margin-right: 1rem;
   }
@@ -65,7 +65,7 @@
   }
   
   .know-more-btn {
-    background-color: #007bff;
+    background-color:goldenrod;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.375rem;

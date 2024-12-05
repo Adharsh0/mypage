@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-
+import "./ContractForm.css"; // Include the CSS file for styling
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +24,7 @@ const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setEmailStatus(""); // Reset status message on new submit
 
     emailjs
       .send(
@@ -35,8 +36,8 @@ const ContactForm = () => {
       .then(
         () => {
           setIsSubmitting(false);
-          setEmailStatus("Email sent successfully!");
-          setFormData({ name: "", email: "", message: "" }); // Reset form
+          setEmailStatus("The Message has been successfully sent to Adharsh!");
+          setFormData({ name: "", email: "", message: "" }); // Reset form fields
         },
         (error) => {
           setIsSubmitting(false);
@@ -47,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form">
+    <div id="contact" className="contact-form">
       <h3>Contact Me</h3>
       <form onSubmit={sendEmail}>
         <input
@@ -77,7 +78,15 @@ const ContactForm = () => {
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
-      {emailStatus && <p className="email-status">{emailStatus}</p>}
+      {emailStatus && (
+        <p
+          className={`email-status ${
+            emailStatus.includes("Failed") ? "error" : "success"
+          }`}
+        >
+          {emailStatus}
+        </p>
+      )}
     </div>
   );
 };

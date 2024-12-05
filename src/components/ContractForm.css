@@ -1,0 +1,157 @@
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes buttonHover {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .contact-form {
+      background-color: #f4f7fb;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem;
+      max-width: 550px;
+      margin: 3rem auto;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e5f2;
+      animation: fadeIn 0.8s ease-out; /* Adding fade-in animation */
+  }
+  
+  .contact-form:hover {
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+  }
+  
+  .contact-form h3 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color:goldenrod;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: slideIn 1s ease-out; /* Adding slide-in animation for the header */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+      width: 100%;
+      padding: 1.1rem;
+      margin-bottom: 1.3rem;
+      border-radius: 8px;
+      border: 1px solid #d1d9e6;
+      font-size: 1rem;
+      background-color: #fff;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+      border-color: #2980b9;
+      box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
+      outline: none;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+      animation: fadeIn 1.2s ease-out 0.3s; /* Adding fade-in for inputs/textarea */
+  }
+  
+  .contact-form textarea {
+      min-height: 160px;
+      resize: vertical;
+  }
+  
+  .contact-form button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+      animation: fadeIn 1.4s ease-out 0.6s; /* Adding fade-in for the button */
+  }
+  
+  .contact-form button:disabled {
+      background-color:#1f5d81;
+      cursor: not-allowed;
+  }
+  
+  .contact-form button:hover:not(:disabled) {
+      background-color:goldenrod;
+      transform: scale(1.05); /* Smooth scale effect on hover */
+      animation: buttonHover 0.3s ease-out; /* Adding scale effect on hover */
+  }
+  
+  .email-status {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #27ae60;
+      font-weight: 400;
+  }
+  
+  .email-status.error {
+      color: #e74c3c;
+      font-weight: 400;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+      .contact-form {
+          padding: 2rem;
+      }
+  
+      .contact-form h3 {
+          font-size: 2rem;
+      }
+  
+      .contact-form button {
+          padding: 1rem 1.8rem;
+          font-size: 1.1rem;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .contact-form {
+          padding: 1.5rem;
+      }
+  
+      .contact-form input,
+      .contact-form textarea {
+          padding: 1rem;
+      }
+  
+      .contact-form button {
+          padding: 1rem 1.6rem;
+      }
+  }
+  

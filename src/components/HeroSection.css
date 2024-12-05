@@ -8,7 +8,7 @@
     background-size: cover; /* Ensure it covers the container */
     filter: grayscale(50%); /* Apply black-and-white theme to background */
     color: black;
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
     position: relative; /* Allow for absolute positioning of content */
     background-position: center center; /* Ensure the image is centered */
@@ -191,3 +191,30 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        font-size: 14px; /* Smaller font for phones */
+        flex-direction: column;
+    }
+
+    .hero-buttons button {
+        width: 100%; /* Full-width buttons for phones */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller heading size */
+    }
+}

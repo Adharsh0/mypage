@@ -94,7 +94,7 @@ const SkillSection = () => {
         <div className="skill-item">
           <div className="icon-card">
             <div className="front">
-              <img src="https://logodix.com/logo/1348847.png" alt="MongoDB" />
+              <img src="https://miro.medium.com/v2/resize:fit:256/1*XR69xeq43LgKB0T_LjZqwQ.png" alt="MongoDB" />
             </div>
             <div className="back">
               <h3>MongoDB</h3>
@@ -106,7 +106,7 @@ const SkillSection = () => {
         <div className="skill-item">
           <div className="icon-card">
             <div className="front">
-              <img src="https://i.pinimg.com/736x/03/5e/08/035e08c356f380653d51abc1984ecbcd.jpg" alt="Express.js" />
+              <img src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png" alt="Express.js" />
             </div>
             <div className="back">
               <h3>Express.js</h3>
@@ -118,7 +118,7 @@ const SkillSection = () => {
         <div className="skill-item">
           <div className="icon-card">
             <div className="front">
-              <img src="https://cdn.shopify.com/s/files/1/0194/3447/products/white_blue_R.png?v=1585925584" alt="React" />
+              <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--qo_Wp38Z--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/e0nl7ziy1la7bpwj7rsp.png" alt="React" />
             </div>
             <div className="back">
               <h3>React</h3>
@@ -130,7 +130,7 @@ const SkillSection = () => {
         <div className="skill-item">
           <div className="icon-card">
             <div className="front">
-              <img src="https://www.safety-label.co.uk/cdn/shop/products/white_red_N_grande.png?v=1585927608" alt="Node.js" />
+              <img src="https://download.logo.wine/logo/Node.js/Node.js-Logo.wine.png" alt="Node.js" />
             </div>
             <div className="back">
               <h3>Node.js</h3>

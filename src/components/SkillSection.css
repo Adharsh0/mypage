@@ -1,4 +1,3 @@
-/* Overall container */
 .skills-container {
     padding: 50px;
     background-color: #f4f4f4;
@@ -11,28 +10,80 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-/* List of skill items */
 .skills-list {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    overflow: hidden; /* Ensure items don't overflow when they slide */
 }
 
-/* Skill item container */
+/* Skill Item Animation - Sliding from Left */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Start from the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at original position */
+    }
+}
+
 .skill-item {
     width: 150px;
     height: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s ease;
+    opacity: 0; /* Start hidden */
+    animation: slideInFromLeft 0.8s ease-in-out forwards;
 }
 
-.skill-item:hover .icon-card {
-    transform: rotateY(180deg); /* Flipping the card on hover */
+/* Apply delay to each skill item */
+.skills-list .skill-item:nth-child(1) {
+    animation-delay: 0.2s;
 }
 
-/* Skill card */
+.skills-list .skill-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.skills-list .skill-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.skills-list .skill-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.skills-list .skill-item:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.skills-list .skill-item:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.skills-list .skill-item:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.skills-list .skill-item:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.skills-list .skill-item:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+.skills-list .skill-item:nth-child(10) {
+    animation-delay: 2s;
+}
+
+.skills-list .skill-item:nth-child(11) {
+    animation-delay: 2.2s;
+}
+
 .icon-card {
     width: 100%;
     height: 100%;
@@ -41,7 +92,6 @@
     transition: transform 0.6s ease;
 }
 
-/* Front and back faces of the card */
 .front, .back {
     position: absolute;
     width: 100%;
@@ -60,7 +110,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Back face style */
 .back {
     background-color: black;
     color: white;
@@ -73,7 +122,6 @@
     text-align: center;
 }
 
-/* Title and description */
 .back h3 {
     margin-bottom: 10px;
 }
@@ -82,16 +130,16 @@
     font-size: 0.9rem;
 }
 
-/* Adding hover effect */
 .skill-item:hover .front img {
-    transform: scale(1.1); /* Slightly scale up the icon */
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .skill-item:hover .back {
-    background-color: darkslategray; /* Darker background on hover */
+    background-color: darkslategray;
 }
 
-/* Responsive layout */
+/* Responsive Design */
 @media (max-width: 768px) {
     .skills-list {
         flex-direction: column;
@@ -99,12 +147,12 @@
     }
     
     .skill-item {
-        width: 120px; /* Adjust card size on small screens */
+        width: 120px;
         height: 120px;
     }
     
     .front img {
-        width: 60px; /* Adjust icon size on small screens */
+        width: 60px;
         height: 60px;
     }
 }
