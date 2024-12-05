@@ -26,18 +26,26 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setEmailStatus(""); // Reset status message on new submit
 
+    // Explicitly pass the required fields to the template
+    const templateParams = {
+      from_name: formData.name,  // Name of the sender
+      to_name: "Adharsh",        // Recipient's name (you can replace with the actual recipient name)
+      message: formData.message, // The message from the form
+      email: formData.email,     // The sender's email (optional, depending on template)
+    };
+
     emailjs
       .send(
         "service_v7yxncf", // Your EmailJS Service ID
         "template_8ggh0o7", // Your EmailJS Template ID
-        formData,
+        templateParams,     // Passing the templateParams with the form data
         "6W6q0q44srJqVQkxS" // Your EmailJS Public Key
       )
       .then(
         () => {
           setIsSubmitting(false);
           setEmailStatus("The Message has been successfully sent to Adharsh!");
-          setFormData({ name: "", email: "", message: "" }); // Reset form fields
+          setFormData({ name: "", email: "", message: "" }); // Reset form fields after successful submission
         },
         (error) => {
           setIsSubmitting(false);

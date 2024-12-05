@@ -18,11 +18,11 @@
     overflow: hidden; /* Ensure items don't overflow when they slide */
 }
 
-/* Skill Item Animation - Sliding from Left */
-@keyframes slideInFromLeft {
+/* Skill Item Animation - Sliding from Right */
+@keyframes slideInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(-50px); /* Start from the left */
+        transform: translateX(50px); /* Start from the right */
     }
     100% {
         opacity: 1;
@@ -36,7 +36,7 @@
     position: relative;
     transform-style: preserve-3d;
     opacity: 0; /* Start hidden */
-    animation: slideInFromLeft 0.8s ease-in-out forwards;
+    animation: slideInFromRight 0.8s ease-in-out forwards;
 }
 
 /* Apply delay to each skill item */
