@@ -182,7 +182,7 @@
         justify-content: space-around; /* Space out buttons evenly */
         gap: 15px; /* Space between buttons */
         position: absolute;
-        bottom: 20px; /* Align buttons to the bottom of the image */
+        bottom: 100px; /* Align buttons to the bottom of the image */
         left: 50%;
         transform: translateX(-50%); /* Center the buttons horizontally */
         width: 80%; /* Make buttons occupy most of the container's width */
