@@ -1,245 +1,4 @@
-/* .contact-form-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #f5f5f5;
-    animation: fadeIn 1s ease-in-out;
-    flex-wrap: wrap; 
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .contact-info {
-    width: 30%;
-    background-color: #ff4c4c;
-    color: #fff;
-    padding: 30px;
-    animation: slideInLeft 1.2s ease;
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .contact-info h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .contact-info p {
-    margin-bottom: 10px;
-    color: black;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    animation: slideInIcons 1s ease-in-out;
-  }
-  
-  @keyframes slideInIcons {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .social-link {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background-color: #fff;
-    color: #ff4c4c;
-    border-radius: 50%;
-    margin: 0 5px;
-    transition: all 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-link:hover {
-    background-color: #ff4c4c;
-    color: #fff;
-    transform: scale(1.2);
-  }
-  
-  .send-message-form {
-    width: 65%;
-    animation: slideInRight 1.2s ease;
-  }
-  
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .send-message-form h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 48%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #ff4c4c;
-    box-shadow: 0 0 10px rgba(255, 76, 76, 0.5);
-  }
-  
-  .form-group textarea {
-    height: 150px;
-  }
-  
-  .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #ff4c4c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #e63b3b;
-    transform: translateY(-3px);
-  }
-  
-  .social-link img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.2s ease;
-  }
-  
-  .social-link img:hover {
-    transform: scale(1.2);
-  }
-  
- 
-  @media (max-width: 768px) {
-    .contact-form-container {
-      flex-direction: column; 
-      padding: 20px;
-    }
-  
-    .contact-info,
-    .send-message-form {
-      width: 100%; 
-      margin-bottom: 20px;
-    }
-  
-    .contact-info {
-      background-color: #ff4c4c;
-      color: #fff;
-      padding: 20px;
-    }
-  
-    .contact-info h3 {
-      font-size: 24px;
-    }
-  
-    .form-group {
-      flex-direction: column; 
-    }
-  
-    .form-group input,
-    .form-group textarea {
-      width: 100%; 
-      margin-bottom: 10px;
-    }
-  
-    .social-link {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .submit-btn {
-      font-size: 14px;
-    }
-  }
-  
-  
-  @media (max-width: 480px) {
-    .contact-form-container {
-      padding: 10px;
-    }
-  
-    .contact-info {
-      padding: 15px;
-    }
-  
-    .send-message-form {
-      padding: 15px;
-    }
-  
-    .social-link {
-      width: 30px;
-      height: 30px;
-    }
-  
-    .submit-btn {
-      font-size: 12px; 
-      padding: 8px; 
-    }
-  }
-   */
+
    .contact-form-container {
     display: flex;
     justify-content: space-between;
@@ -312,11 +71,11 @@
     display: inline-block;
     width: 50px; /* Increased size for better visibility */
     height: 50px;
-    line-height: 50px;
+    line-height: 80px;
     text-align: center;
-    background-color: #fff;
+    background-color: #ff4c4c;
     color: #ff4c4c;
-    border-radius: 50%;
+    border-radius: 100%;
     transition: all 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
 }
@@ -324,14 +83,14 @@
 .social-link:hover {
     background-color: #ff4c4c;
     color: #fff;
-    transform: scale(1.2); /* Slightly larger on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
 .social-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 70%;
+    height: 70%;
+    object-fit:cover;
     border-radius: 50%;
     transition: transform 0.2s ease;
 }
@@ -481,4 +240,7 @@
         font-size: 12px; /* Make button text even smaller */
         padding: 8px; /* Reduce button size */
     }
+}
+#contact {
+    padding-top: 80px; /* Adjust based on header height */
 }

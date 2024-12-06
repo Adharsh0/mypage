@@ -123,3 +123,7 @@ html, body {
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
