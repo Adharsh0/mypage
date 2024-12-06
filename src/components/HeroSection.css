@@ -166,8 +166,14 @@
         font-size: 14px; /* Smaller font for phones */
         flex-direction: column; /* Stack the content vertically */
         justify-content: center; /* Center the content vertically */
-        text-align: center; /* Center the text */
         padding: 30px 20px; /* Add padding around the container */
+        position: relative; /* Make sure buttons are positioned relative to this container */
+    }
+
+    .hero-content {
+        z-index: 10; /* Keep content above the overlay */
+        position: relative;
+        text-align: center; /* Center the text */
     }
 
     .hero-content h1 {
@@ -195,11 +201,11 @@
         bottom: 20px; /* Align buttons to the bottom of the image */
         left: 50%;
         transform: translateX(-50%); /* Center the buttons horizontally */
-        width: 100%; /* Ensure the buttons occupy full width */
+        width: 80%; /* Make buttons occupy most of the container's width */
     }
 
     .hero-buttons button {
-        width: 80%; /* Make the buttons a bit wider */
+        width: 100%; /* Make the buttons take full width */
         padding: 12px 0; /* Add padding for better click area */
     }
 
