@@ -4,10 +4,10 @@
     justify-content: flex-end; /* Align content to the right */
     align-items: center;
     padding: 50px;
-    background: url('/myimage.jpeg') center/contain no-repeat; /* Adjust to contain */
-    background-size: contain; /* This will scale the image down to fit within the container */
-    background-position: center; /* Keep the image centered */
-    filter: grayscale(30%);
+    background: url('/myimage.jpeg') center/cover no-repeat;
+    background-size: cover; /* Ensure it covers the container */
+    background-position: center center; /* Keep the image centered */
+    filter: grayscale(30%);  
     color: black;
     min-height: 100vh;
     width: 100%;
@@ -158,32 +158,54 @@
     }
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
     .hero-container {
-        background-size: contain; /* Ensure the image scales down for smaller screens */
-        background-position: center; /* Keep image centered */
-        padding: 30px; /* Adjust padding for smaller screens */
+        background-size: cover; 
+        background-position: center top; 
+        padding: 30px; 
     }
     
     .hero-content {
         max-width: 90%;
-        text-align: center; /* Center-align text for smaller screens */
-        padding: 20px; /* Add padding for better spacing */
+        text-align: center; 
+        padding: 20px; 
     }
 
     .hero-buttons {
-        flex-direction: column; /* Stack buttons vertically */
+        flex-direction: column; 
         gap: 10px;
     }
 
     .yellow-btn, .outline-btn {
-        width: 100%; /* Ensure buttons are full-width on small screens */
+        width: 100%; 
     }
 }
 
 @media (max-width: 480px) {
     .hero-container {
+        font-size: 14px; 
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem; 
+    }
+
+    .hero-buttons button {
+        width: 100%; 
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+} */
+/* Media Query for smaller screens (Phones) */
+@media (max-width: 480px) {
+    .hero-container {
+        background-image: url('/phone.jpeg'); /* Replace with the new phone-specific image */
+        background-size: cover; /* Ensure the background covers the container */
+        background-position: center center; /* Keep the image centered */
         font-size: 14px; /* Smaller font for phones */
         flex-direction: column;
     }
