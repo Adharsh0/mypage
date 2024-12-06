@@ -186,11 +186,6 @@ const Profile = ({ onBackToHero }) => {
         <p>Email: adarshudayakumar30@gmail.com</p>
         <p>Phone: 7907605167</p>
       </section>
-
-      {/* Home Button at the bottom */}
-      <section className="home-button">
-        <button onClick={onBackToHero}> Home</button>
-      </section>
     </div>
   );
 };
