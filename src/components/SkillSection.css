@@ -21,7 +21,7 @@
 /* Skill Item Animation - Sliding from Right */
 @keyframes slideInFromRight {
     0% {
-        opacity: 50;
+        opacity: 0;
         transform: translateX(200px); /* Start from the right */
     }
     100% {
@@ -139,25 +139,7 @@
     background-color: darkslategray;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .skills-list {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .skill-item {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .front img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* Responsive Design */
+/* Responsive Design for screens smaller than 768px */
 @media (max-width: 768px) {
     .skills-list {
         display: grid;
@@ -166,15 +148,29 @@
     }
 
     .skill-item {
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 150px; /* Keep height consistent */
     }
     
     .front img {
         width: 60px;
         height: 60px;
     }
+
+    .back {
+        padding: 5px; /* Reduce padding for better fit */
+    }
+
+    .back h3 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .back p {
+        font-size: 0.8rem; /* Adjust text size for better readability */
+    }
 }
+
+
 /* Responsive Design */
 /* @media (max-width: 768px) {
     .skills-list {
