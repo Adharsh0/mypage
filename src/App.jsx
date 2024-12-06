@@ -73,9 +73,7 @@ function App() {
         </>
       ) : (
         <div>
-          <Profile />
-          {/* Back button to return to Hero Section */}
-          <button onClick={handleBackToHero} className="back-to-hero-btn">Back to Home</button>
+          <Profile onBackToHero={handleBackToHero} />
         </div>
       )}
     </div>
