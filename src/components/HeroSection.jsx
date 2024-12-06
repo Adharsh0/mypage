@@ -50,7 +50,7 @@ const HeroSection = ({ onProfileClick, onConnectClick }) => {
           <button className="hero-btn yellow-btn" onClick={scrollToContact}>
             Connect with Me
           </button>
-          <button className="hero-btn yellow-btn" onClick={onProfileClick}>
+          <button className="hero-btn yellow-btnn" onClick={onProfileClick}>
             My Profile
           </button>
           <button className="hero-btn outline-btn">
