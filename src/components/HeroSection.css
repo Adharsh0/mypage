@@ -161,6 +161,11 @@
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
+    .yellow-btn, .outline-btn {
+        display: none; /* Hide these buttons on mobile devices */
+    }
+}
+@media (max-width: 768px) {
     .hero-container {
         background-image: url('/pi.jpeg');
         background-size: cover; /* Ensure the background covers the container */
@@ -183,7 +188,11 @@
         width: 100%; /* Ensure buttons are full-width on small screens */
     }
 }
-
+@media (max-width: 480px) {
+    .yellow-btn, .outline-btn {
+        display: none; /* Hide these buttons on mobile devices */
+    }
+}
 @media (max-width: 480px) {
     .hero-container {
         font-size: 14px; /* Smaller font for phones */
