@@ -157,7 +157,6 @@
         text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
     }
 }
-/* Mobile responsive styles */
 @media (max-width: 480px) {
     .hero-container {
         background-image: url('/phone.jpeg'); /* Phone-specific background image */
@@ -244,3 +243,4 @@
         margin-bottom: 20px; /* Add spacing below text */
     }
 }
+
