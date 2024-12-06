@@ -160,73 +160,87 @@
 /* Mobile responsive styles */
 @media (max-width: 480px) {
     .hero-container {
-        background-image: url('/phone.jpeg'); /* Replace with the new phone-specific image */
-        background-size: cover; /* Ensure the background covers the container */
-        background-position: center center; /* Keep the image centered */
-        font-size: 14px; /* Smaller font for phones */
-        flex-direction: column; /* Stack the content vertically */
-        justify-content: center; /* Center the content vertically */
-        padding: 30px 20px; /* Add padding around the container */
-        position: relative; /* Ensure buttons are positioned correctly */
+        background-image: url('/phone.jpeg'); /* Phone-specific background image */
+        background-size: cover; /* Cover the entire container */
+        background-position: center; /* Center the image */
+        font-size: 14px; /* Smaller font size for phones */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: flex-start; /* Push content towards the top */
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+        position: relative;
+        height: 100vh; /* Make the container fill the screen height */
+        display: flex; /* Ensure proper alignment of content */
     }
 
     .hero-content {
-        z-index: 10; /* Keep content above the overlay */
+        z-index: 10; /* Keep the content above the background */
         position: relative;
-        text-align: center; /* Center the text */
-        margin-bottom: 50px; /* Adjust spacing between content and buttons */
+        text-align: center; /* Center-align text */
+        margin-bottom: auto; /* Push text upward, keeping space for buttons */
+        color: white; /* Ensure text is readable against background */
     }
 
     .hero-buttons {
         display: flex;
-        justify-content: space-around; /* Space out buttons evenly */
-        gap: 15px; /* Space between buttons */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons horizontally */
+        gap: 15px; /* Add space between buttons */
         position: absolute;
-        bottom: 100px; /* Align buttons to the bottom of the image */
+        bottom: 20px; /* Align buttons at the bottom */
         left: 50%;
         transform: translateX(-50%); /* Center the buttons horizontally */
-        width: 80%; /* Make buttons occupy most of the container's width */
-        z-index: 100; /* Ensure buttons appear above the image */
+        width: 80%; /* Restrict button width for better layout */
+        z-index: 100; /* Keep buttons above other elements */
     }
 
     .hero-buttons button {
-        padding: 12px 20px; /* Add padding for better click area */
-        font-size: 1rem; /* Adjust font size for mobile */
-        width: auto; /* Allow buttons to auto-size */
+        padding: 10px 15px; /* Add padding for better touch area */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        border-radius: 25px; /* Rounded button corners */
+        text-transform: uppercase; /* Consistent button text style */
+        width: 100%; /* Make buttons occupy full width */
+        max-width: 300px; /* Limit button width for larger phones */
     }
 
     .yellow-btn {
-        background-color: white;
-        color: black;
-        transition: background-color 0.3s ease;
+        background-color: #ffffff; /* White background for contrast */
+        color: #333; /* Dark text for readability */
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .yellow-btn:hover {
-        background-color: #f5c600;
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        background-color: #f5c600; /* Bright yellow hover effect */
+        transform: translateY(-3px); /* Lift button slightly on hover */
     }
 
     .outline-btn {
         background: none;
-        border: 2px solid gold;
-        color: black;
-        padding: 14px 25px;
-        font-size: 1.2rem;
-        border-radius: 35px;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    }
-
-    .outline-btn a {
-        text-decoration: none;
-        color: black;
+        border: 2px solid gold; /* Gold border for emphasis */
+        color: #ffffff; /* White text for contrast */
+        font-size: 1rem;
+        padding: 12px 20px;
+        text-align: center;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     }
 
     .outline-btn:hover {
-        background-color: gold;
-        color: black;
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        background-color: gold; /* Gold fill on hover */
+        color: black; /* Black text for contrast */
+        transform: translateY(-3px); /* Slight lift on hover */
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        margin-bottom: 10px; /* Reduce spacing below heading */
+        line-height: 1.2; /* Improve readability */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Adjust paragraph size */
+        line-height: 1.4; /* Improve readability */
+        margin-bottom: 20px; /* Add spacing below text */
     }
 }
-
