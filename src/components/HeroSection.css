@@ -161,6 +161,7 @@
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .hero-container {
+        background-image: url('/pi.jpeg');
         background-size: cover; /* Ensure the background covers the container */
         background-position: center top; /* Focus on the top of the image for smaller screens */
         padding: 30px; /* Adjust padding for smaller screens */
