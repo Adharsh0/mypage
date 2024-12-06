@@ -1,4 +1,4 @@
-
+/* Hero container */
 .hero-container {
     display: flex;
     justify-content: flex-end; /* Align content to the right */
@@ -6,38 +6,12 @@
     padding: 50px;
     background: url('/myimage.jpeg') center/cover no-repeat;
     background-size: cover; /* Ensure it covers the container */
+    background-position: center center; /* Keep the image centered */
     filter: grayscale(30%);  
     color: black;
     min-height: 100vh;
     width: 100%;
     position: relative; /* Allow for absolute positioning of content */
-    background-position: center center; 
-}
-
-/* Overlay for text */
-.hero-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better text visibility */
-    z-index: 1; /* Pla…
-[6:43 pm, 06/12/2024] Adarsh Udayakumar: /* Add styles for About Me button */
-.hero-container {
-    display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: center;
-    padding: 50px;
-    background: url('/myimage.jpeg') center/cover no-repeat;
-    background-size: cover; /* Ensure it covers the container */
-    filter: grayscale(30%);  
-    color: black;
-    min-height: 100vh;
-    width: 100%;
-    position: relative; /* Allow for absolute positioning of content */
-    background-position: center center; 
 }
 
 /* Overlay for text */
@@ -88,7 +62,7 @@
     overflow: hidden; /* Hide overflowing text */
     font-size: 1.2rem;
     font-weight: bold;
-    color:goldenrod;
+    color: goldenrod;
     animation: blink 0.9s step-end infinite; /* Blinking cursor animation */
 }
 
@@ -111,7 +85,7 @@
 
 /* Style for yellow button */
 .yellow-btn {
-    background-color:white; /* Yellow button */
+    background-color: white; /* Yellow button */
     color: black;
     transition: background-color 0.3s ease;
 }
@@ -186,47 +160,25 @@
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .hero-content {
-      max-width: 90%;
-      text-align: center;
-    }
-}
-
-/* Style for the About Me link */
-/* For devices with a max width of 768px (common breakpoint for tablets and phones) */
-@media (max-width: 768px) {
-    .hero-content {
-      text-align: center; /* Adjust alignment */
-      padding: 20px; /* Add padding for smaller screens */
-    }
-  
-    .hero-buttons {
-      flex-direction: column; /* Stack buttons vertically */
-      gap: 10px;
-    }
-  }
-  
-  /* For very small devices like phones (max width: 480px) */
-  @media (max-width: 480px) {
     .hero-container {
-      font-size: 12px; /* Reduce font sizes */
+        background-size: cover; /* Ensure the background covers the container */
+        background-position: center top; /* Focus on the top of the image for smaller screens */
+        padding: 30px; /* Adjust padding for smaller screens */
     }
-  
-    .hero-buttons button {
-      width: 100%; /* Buttons take full width */
-    }
-  }
-  
-  @media (max-width: 768px) {
+    
     .hero-content {
         max-width: 90%;
-        text-align: center;
-        padding: 20px;
+        text-align: center; /* Center-align text for smaller screens */
+        padding: 20px; /* Add padding for better spacing */
     }
 
     .hero-buttons {
         flex-direction: column; /* Stack buttons vertically */
         gap: 10px;
+    }
+
+    .yellow-btn, .outline-btn {
+        width: 100%; /* Ensure buttons are full-width on small screens */
     }
 }
 
@@ -236,12 +188,15 @@
         flex-direction: column;
     }
 
+    .hero-content h1 {
+        font-size: 2.3rem; /* Smaller heading size */
+    }
+
     .hero-buttons button {
         width: 100%; /* Full-width buttons for phones */
     }
 
-    .hero-content h1 {
-        font-size: 2.3rem; /* Smaller heading size */
+    .hero-content {
+        padding: 20px; /* Adjust padding */
     }
-}
-}
+} 
