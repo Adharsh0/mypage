@@ -119,3 +119,7 @@ html, body {
   background-color: #5A4BB7; /* Slightly darker SlateBlue for hover effect */
   transform: translateY(-3px);
 }
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}

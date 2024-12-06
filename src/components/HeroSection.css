@@ -4,14 +4,14 @@
     justify-content: flex-end; /* Align content to the right */
     align-items: center;
     padding: 50px;
-    background: url('/pic.jpeg') center/cover no-repeat;
+    background: url('/myimage.jpeg') center/cover no-repeat;
     background-size: cover; /* Ensure it covers the container */
-    filter: grayscale(50%); /* Apply black-and-white theme to background */
+    filter: grayscale(30%);  
     color: black;
     min-height: 100vh;
     width: 100%;
     position: relative; /* Allow for absolute positioning of content */
-    background-position: center center; /* Ensure the image is centered */
+    background-position: center center; 
 }
 
 /* Overlay for text */
@@ -29,14 +29,14 @@
 /* Content */
 .hero-content {
     max-width: 50%;
-    z-index: 3; /* Ensure text appears above the overlay */
+    z-index: 10; /* Ensure text appears above the overlay */
     position: relative; /* Ensure the content is not affected by the overlay */
     text-align: right; /* Align the text to the right */
 }
 
 /* Heading */
 .hero-content h1 {
-    font-size: 3.5rem; /* Increased size for more emphasis */
+    font-size: 3.3rem; /* Increased size for more emphasis */
     font-weight: 700; /* Bolder text for better readability */
     margin-bottom: 20px;
     line-height: 1.2;
@@ -57,12 +57,12 @@
 /* Typing Animation for the roles */
 .typewriter {
     display: inline-block;
-    border-right: 2px solid #ffd700; /* Blinking cursor */
+    border-right: 1px solid #ffd700; /* Blinking cursor */
     white-space: nowrap;
     overflow: hidden; /* Hide overflowing text */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #ffd700;
+    color:goldenrod;
     animation: blink 0.9s step-end infinite; /* Blinking cursor animation */
 }
 
@@ -183,7 +183,7 @@
   /* For very small devices like phones (max width: 480px) */
   @media (max-width: 480px) {
     .hero-container {
-      font-size: 14px; /* Reduce font sizes */
+      font-size: 12px; /* Reduce font sizes */
     }
   
     .hero-buttons button {
@@ -215,6 +215,6 @@
     }
 
     .hero-content h1 {
-        font-size: 2.5rem; /* Smaller heading size */
+        font-size: 2.3rem; /* Smaller heading size */
     }
 }

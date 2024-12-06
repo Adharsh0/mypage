@@ -48,6 +48,7 @@ import SkillSection from './components/SkillSection';
 import ProjectSection from './components/ProjectSection';
 import Profile from './components/Profile';
 import ContactForm from './components/ContactForm';
+import EndSection from './components/EndSection';
 
 function App() {
   const [showProfile, setShowProfile] = useState(false);
@@ -64,10 +65,11 @@ function App() {
     <div className="App">
       {!showProfile ? (
         <>
-          <HeroSection onProfileClick={handleProfileClick} />
+          <HeroSection id="home" onProfileClick={handleProfileClick} />
           <SkillSection />
           <ProjectSection />
           <ContactForm id="contact" />
+          <EndSection />
         </>
       ) : (
         <div>

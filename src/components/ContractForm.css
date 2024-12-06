@@ -1,157 +1,174 @@
-/* Keyframes for Animations */
-@keyframes fadeIn {
-    0% {
+
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f5f5f5;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
       opacity: 0;
       transform: translateY(20px);
     }
-    100% {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
   
-  @keyframes slideIn {
-    0% {
+  .contact-info {
+    width: 30%;
+    background-color: #ff4c4c;
+    color: #fff;
+    padding: 30px;
+    animation: slideInLeft 1.2s ease;
+  }
+  
+  @keyframes slideInLeft {
+    from {
       transform: translateX(-100%);
+      opacity: 0;
     }
-    100% {
+    to {
       transform: translateX(0);
+      opacity: 1;
     }
   }
   
-  @keyframes buttonHover {
-    0% {
-      transform: scale(1);
+  .contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: slideInIcons 1s ease-in-out; /* Sliding animation for social icons */
+  }
+  
+  @keyframes slideInIcons {
+    from {
+      opacity: 0;
+      transform: translateX(-50px); /* Start slightly off-screen to the left */
     }
-    100% {
-      transform: scale(1.05);
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the normal position */
     }
   }
   
-  .contact-form {
-      background-color: #f4f7fb;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      padding: 2.5rem;
-      max-width: 550px;
-      margin: 3rem auto;
-      font-family: 'Roboto', sans-serif;
-      color: #333;
-      transition: all 0.3s ease;
-      border: 1px solid #e0e5f2;
-      animation: fadeIn 0.8s ease-out; /* Adding fade-in animation */
+  .social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    color: #ff4c4c;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease, transform 0.3s ease;
   }
   
-  .contact-form:hover {
-      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
-      transform: translateY(-5px);
+  .social-link:hover {
+    background-color: #ff4c4c;
+    color: #fff;
+    transform: scale(1.2);
   }
   
-  .contact-form h3 {
-      font-size: 2.3rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      color:goldenrod;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      animation: slideIn 1s ease-out; /* Adding slide-in animation for the header */
+  .send-message-form {
+    width: 65%;
+    animation: slideInRight 1.2s ease;
   }
   
-  .contact-form input,
-  .contact-form textarea {
-      width: 100%;
-      padding: 1.1rem;
-      margin-bottom: 1.3rem;
-      border-radius: 8px;
-      border: 1px solid #d1d9e6;
-      font-size: 1rem;
-      background-color: #fff;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
   
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-      border-color: #2980b9;
-      box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
-      outline: none;
+  .send-message-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   
-  .contact-form input,
-  .contact-form textarea {
-      animation: fadeIn 1.2s ease-out 0.3s; /* Adding fade-in for inputs/textarea */
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
   }
   
-  .contact-form textarea {
-      min-height: 160px;
-      resize: vertical;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
-  .contact-form button {
-      background-color: #2980b9;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      width: 100%;
-      margin-top: 1rem;
-      animation: fadeIn 1.4s ease-out 0.6s; /* Adding fade-in for the button */
+  .form-group input,
+  .form-group textarea {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .contact-form button:disabled {
-      background-color:#1f5d81;
-      cursor: not-allowed;
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.5);
   }
   
-  .contact-form button:hover:not(:disabled) {
-      background-color:goldenrod;
-      transform: scale(1.05); /* Smooth scale effect on hover */
-      animation: buttonHover 0.3s ease-out; /* Adding scale effect on hover */
+  .form-group textarea {
+    height: 150px;
   }
   
-  .email-status {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #27ae60;
-      font-weight: 400;
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
   }
   
-  .email-status.error {
-      color: #e74c3c;
-      font-weight: 400;
+  .submit-btn:hover {
+    background-color: #e63b3b;
+    transform: translateY(-3px);
   }
   
-  /* Responsive design */
-  @media (max-width: 768px) {
-      .contact-form {
-          padding: 2rem;
-      }
-  
-      .contact-form h3 {
-          font-size: 2rem;
-      }
-  
-      .contact-form button {
-          padding: 1rem 1.8rem;
-          font-size: 1.1rem;
-      }
+  .social-link img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
   }
   
-  @media (max-width: 480px) {
-      .contact-form {
-          padding: 1.5rem;
-      }
-  
-      .contact-form input,
-      .contact-form textarea {
-          padding: 1rem;
-      }
-  
-      .contact-form button {
-          padding: 1rem 1.6rem;
-      }
+  .social-link img:hover {
+    transform: scale(1.2);
   }
-  
