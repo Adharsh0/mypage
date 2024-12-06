@@ -161,10 +161,12 @@
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .yellow-btn, .outline-btn {
-        display: none; /* Hide these buttons on mobile devices */
+    .yellow-btn {
+        display: none; /* Hide the 'Connect with Me' button on mobile devices */
     }
 }
+
+
 @media (max-width: 768px) {
     .hero-container {
         background-image: url('/pi.jpeg');
@@ -186,6 +188,11 @@
 
     .yellow-btn, .outline-btn {
         width: 100%; /* Ensure buttons are full-width on small screens */
+    }
+}
+@media (max-width: 480px) {
+    .yellow-btn {
+        display: none; /* Hide the 'Connect with Me' button on mobile devices */
     }
 }
 @media (max-width: 480px) {
