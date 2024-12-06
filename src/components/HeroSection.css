@@ -1,4 +1,4 @@
-/* Add styles for About Me button */
+/* Hero section container */
 .hero-container {
     display: flex;
     justify-content: flex-end; /* Align content to the right */
@@ -10,7 +10,7 @@
     color: black;
     min-height: 100vh;
     width: 100%;
-    position: relative; /* Allow for absolute positioning of content */
+    position: relative;
     background-position: center center; 
 }
 
@@ -26,44 +26,44 @@
     z-index: 1; /* Place overlay behind the content */
 }
 
-/* Content */
+/* Content inside hero */
 .hero-content {
     max-width: 50%;
     z-index: 10; /* Ensure text appears above the overlay */
-    position: relative; /* Ensure the content is not affected by the overlay */
-    text-align: right; /* Align the text to the right */
+    position: relative;
+    text-align: right; /* Align text to the right */
 }
 
 /* Heading */
 .hero-content h1 {
-    font-size: 3.3rem; /* Increased size for more emphasis */
-    font-weight: 700; /* Bolder text for better readability */
+    font-size: 3.3rem; /* Increased size for emphasis */
+    font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: #d3d3d3; /* Light gray for the name */
+    color: #d3d3d3;
     text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700; /* Glowing effect */
     animation: glowing 1.5s infinite alternate; /* Glowing animation */
 }
 
 /* Subheading */
 .hero-content h2 {
-    font-size: 1.5rem; /* Larger font for better readability */
+    font-size: 1.5rem; /* Larger font */
     margin-bottom: 30px;
     margin-right: 70%;
-    color: black; /* Slightly lighter gray */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adding shadow to paragraph for readability */
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Shadow effect for better visibility */
 }
 
-/* Typing Animation for the roles */
+/* Typing Animation for roles */
 .typewriter {
     display: inline-block;
     border-right: 1px solid #ffd700; /* Blinking cursor */
     white-space: nowrap;
-    overflow: hidden; /* Hide overflowing text */
+    overflow: hidden;
     font-size: 1.2rem;
     font-weight: bold;
-    color:goldenrod;
-    animation: blink 0.9s step-end infinite; /* Blinking cursor animation */
+    color: goldenrod;
+    animation: blink 0.9s step-end infinite; /* Blinking cursor */
 }
 
 /* Blinking Cursor */
@@ -76,34 +76,34 @@
     }
 }
 
-/* Buttons */
+/* Buttons in Hero */
 .hero-buttons {
     display: flex;
     gap: 15px;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end;
 }
 
 /* Style for yellow button */
 .yellow-btn {
-    background-color:white; /* Yellow button */
+    background-color: white;
     color: black;
     transition: background-color 0.3s ease;
 }
 
 .yellow-btn:hover {
     background-color: #f5c600;
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Updated style for the outline button */
+/* Outline button */
 .outline-btn {
     background: none;
     border: 2px solid gold;
     color: black;
     padding: 14px 25px;
     font-size: 1.2rem;
-    border-radius: 35px; /* Larger border-radius for a rounded look */
+    border-radius: 35px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
@@ -115,16 +115,11 @@
 .outline-btn:hover {
     background-color: gold;
     color: black;
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Add box-shadow to the buttons when hovered */
-.hero-btn:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
-}
-
-/* Add a "About Me" button at the top right */
+/* Add "About Me" button */
 .about-me-btn {
     position: absolute;
     top: 20px;
@@ -145,7 +140,7 @@
     transform: scale(1.1);
 }
 
-/* Animation for the glowing name */
+/* Glowing effect for heading */
 @keyframes glowing {
     0% {
         text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
@@ -158,63 +153,61 @@
     }
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    .hero-content {
-      max-width: 90%;
-      text-align: center;
-    }
-}
+/* Media Queries for Responsiveness */
 
-/* Style for the About Me link */
-/* For devices with a max width of 768px (common breakpoint for tablets and phones) */
+/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
-    .hero-content {
-      text-align: center; /* Adjust alignment */
-      padding: 20px; /* Add padding for smaller screens */
-    }
-  
-    .hero-buttons {
-      flex-direction: column; /* Stack buttons vertically */
-      gap: 10px;
-    }
-  }
-  
-  /* For very small devices like phones (max width: 480px) */
-  @media (max-width: 480px) {
     .hero-container {
-      font-size: 12px; /* Reduce font sizes */
+        padding: 30px; /* Reduced padding for smaller screens */
+        background-size: cover; /* Ensure the background image scales well */
     }
-  
-    .hero-buttons button {
-      width: 100%; /* Buttons take full width */
-    }
-  }
-  
-  @media (max-width: 768px) {
+
     .hero-content {
-        max-width: 90%;
-        text-align: center;
-        padding: 20px;
+        max-width: 80%; /* Allow for more space on smaller screens */
+        text-align: center; /* Center text */
+        padding: 20px; /* Add padding for small screens */
     }
 
     .hero-buttons {
         flex-direction: column; /* Stack buttons vertically */
         gap: 10px;
     }
-}
 
-@media (max-width: 480px) {
-    .hero-container {
-        font-size: 14px; /* Smaller font for phones */
-        flex-direction: column;
+    .hero-container h1 {
+        font-size: 2.5rem; /* Smaller font size for smaller screens */
     }
 
-    .hero-buttons button {
-        width: 100%; /* Full-width buttons for phones */
+    .hero-container h2 {
+        font-size: 1.2rem; /* Adjust size of subheading */
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+
+    .yellow-btn, .outline-btn {
+        width: 100%; /* Buttons take full width */
+    }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-container {
+        font-size: 14px; /* Smaller font for mobile */
+        flex-direction: column; /* Stack content */
     }
 
     .hero-content h1 {
-        font-size: 2.3rem; /* Smaller heading size */
+        font-size: 2rem; /* Further reduce heading size */
+    }
+
+    .hero-content h2 {
+        font-size: 1rem; /* Reduce subheading size */
+    }
+
+    .hero-buttons button {
+        width: 100%; /* Full-width buttons on mobile */
+    }
+
+    .about-me-btn {
+        font-size: 0.9rem; /* Smaller button text for mobile */
+        padding: 8px 16px; /* Adjust button padding */
     }
 }
