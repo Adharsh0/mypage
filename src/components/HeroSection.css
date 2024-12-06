@@ -159,7 +159,7 @@
 }
 @media (max-width: 480px) {
     .hero-container {
-        background-image: url('/phone.jpeg'); /* Phone-specific background image */
+        background-image: url('/pi.jpeg'); /* Phone-specific background image */
         background-size: cover; /* Cover the entire container */
         background-position: center; /* Center the image */
         font-size: 14px; /* Smaller font size for phones */
