@@ -113,7 +113,23 @@
       opacity: 1;
   }
 }
+.download-button {
+  font-size: 18px;
+  padding: 15px 30px;
+  background-color:goldenrod; /* Gold color for download button */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 3%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
 
+.download-button:hover {
+  background-color:#6a5acd; /* Darker shade of gold */
+}
 /* Media Queries for Small Screens (Tablets and Mobile) */
 @media (max-width: 768px) {
   .title {
@@ -152,20 +168,4 @@
     padding: 10px 20px; /* Adjust padding for small mobile screens */
 }
 }
-.download-button {
-  font-size: 18px;
-  padding: 15px 30px;
-  background-color:goldenrod; /* Gold color for download button */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-left: 3%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
 
-.download-button:hover {
-  background-color:#6a5acd; /* Darker shade of gold */
-}
