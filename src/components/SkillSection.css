@@ -1,6 +1,6 @@
 .skills-container {
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color:whitesmoke;
     text-align: center;
 }
 
@@ -15,7 +15,8 @@
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    overflow: hidden; /* Ensure items don't overflow when they slide */
+    overflow: hidden; 
+    /* Ensure items don't overflow when they slide */
 }
 
 /* Skill Item Animation - Sliding from Right */

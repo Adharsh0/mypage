@@ -127,3 +127,26 @@ html, body {
   scroll-behavior: smooth; /* Smooth scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+.back-to-hero-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6A5ACD; /* SlateBlue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  position: fixed; /* Make it sticky */
+  bottom: 20px; /* Position it at the bottom for better mobile visibility */
+  right: 20px; /* Add spacing from edges */
+}
+
+.back-to-hero-btn:hover {
+  background-color: #483D8B; /* Darker SlateBlue */
+}
+
+.back-to-hero-btn:active {
+  transform: scale(0.95); /* Add a tap effect */
+}
