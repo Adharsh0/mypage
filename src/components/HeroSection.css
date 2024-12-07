@@ -168,6 +168,15 @@
         text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
     }
 }
+.hero-content h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #d3d3d3;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+    animation: glowing 1.5s infinite alternate, fadeInSlideUp 1s ease-out;
+}
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
@@ -292,12 +301,3 @@
 }
 
 /* Heading with updated animation */
-.hero-content h1 {
-    font-size: 3.3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    color: #d3d3d3;
-    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
-    animation: glowing 1.5s infinite alternate, fadeInSlideUp 1s ease-out;
-}
